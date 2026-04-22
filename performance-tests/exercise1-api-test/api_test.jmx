@@ -36,7 +36,7 @@ Notes:
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
           <intProp name="HTTPSampler.connect_timeout">20000</intProp>
           <intProp name="HTTPSampler.response_timeout">20000</intProp>
           <stringProp name="HTTPSampler.domain">restful-booker.herokuapp.com</stringProp>
@@ -48,7 +48,7 @@ Notes:
           <stringProp name="HTTPSampler.implementation"></stringProp>
         </ConfigTestElement>
         <hashTree/>
-        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
           <collectionProp name="HeaderManager.headers">
             <elementProp name="Content-Type" elementType="Header">
               <stringProp name="Header.name">Content-Type</stringProp>
@@ -61,12 +61,12 @@ Notes:
           </collectionProp>
         </HeaderManager>
         <hashTree/>
-        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time (1.0s - 2.5s)" enabled="true">
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time (1.0s - 2.5s)">
           <stringProp name="ConstantTimer.delay">1000</stringProp>
           <stringProp name="RandomTimer.range">1500</stringProp>
         </UniformRandomTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1. POST /auth - Authenticate" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1. POST /auth - Authenticate">
           <stringProp name="HTTPSampler.path">/auth</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -102,7 +102,7 @@ Notes:
             <stringProp name="Assertion.custom_message"></stringProp>
           </ResponseAssertion>
           <hashTree/>
-          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration <= 500ms" enabled="true">
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration le 500ms" enabled="true">
             <stringProp name="DurationAssertion.duration">500</stringProp>
           </DurationAssertion>
           <hashTree/>
@@ -125,7 +125,7 @@ Notes:
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Booking ID">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Booking ID" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">bookingid</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$.bookingid</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
@@ -133,7 +133,7 @@ Notes:
             <stringProp name="JSONPostProcessor.defaultValues">NO_BOOKING_ID</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Status 200">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Status 200" enabled="true">
             <collectionProp name="Asserion.test_strings"/>
             <collectionProp name="Asserions">
               <stringProp name="49586">200</stringProp>
@@ -144,12 +144,12 @@ Notes:
             <stringProp name="Assertion.custom_message"></stringProp>
           </ResponseAssertion>
           <hashTree/>
-          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration <= 500ms" enabled="true">
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration le 500ms" enabled="true">
             <stringProp name="DurationAssertion.duration">500</stringProp>
           </DurationAssertion>
           <hashTree/>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Run Read/Update/Delete only if bookingid exists" enabled="true">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Run Read/Update/Delete only if bookingid exists">
           <stringProp name="IfController.condition">${__groovy(vars.get(&apos;bookingid&apos;) != null &amp;&amp; vars.get(&apos;bookingid&apos;) != &apos;&apos; &amp;&amp; vars.get(&apos;bookingid&apos;) != &apos;NO_BOOKING_ID&apos;)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
@@ -178,7 +178,7 @@ Notes:
               <stringProp name="Assertion.custom_message"></stringProp>
             </ResponseAssertion>
             <hashTree/>
-            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration <= 500ms" enabled="true">
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration le 500ms" enabled="true">
               <stringProp name="DurationAssertion.duration">500</stringProp>
             </DurationAssertion>
             <hashTree/>
@@ -225,7 +225,7 @@ Notes:
               <stringProp name="Assertion.custom_message"></stringProp>
             </ResponseAssertion>
             <hashTree/>
-            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration <= 500ms" enabled="true">
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration le 500ms" enabled="true">
               <stringProp name="DurationAssertion.duration">500</stringProp>
             </DurationAssertion>
             <hashTree/>
@@ -266,7 +266,7 @@ Notes:
               <stringProp name="Assertion.custom_message"></stringProp>
             </ResponseAssertion>
             <hashTree/>
-            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration <= 500ms" enabled="true">
+            <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Assert Duration le 500ms" enabled="true">
               <stringProp name="DurationAssertion.duration">500</stringProp>
             </DurationAssertion>
             <hashTree/>
