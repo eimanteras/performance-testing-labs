@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Demoblaze Website Performance Test" enabled="true">
@@ -21,11 +21,10 @@
           </elementProp>
         </collectionProp>
       </elementProp>
-      <stringProp name="TestPlan.user_define_classpath">
-      </stringProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
-      <elementProp name="TestPlan.test_fragments" elementType="TestFragmentController" guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragments" enabled="true" />
+      <elementProp name="TestPlan.test_fragments" elementType="TestFragmentController" guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragments" enabled="true"/>
       <stringProp name="TestPlan.comments">Demoblaze Website Performance Test
 
 Objectives:
@@ -45,7 +44,7 @@ Test Scenario:
 
 Notes:
 - Includes realistic think time delays between steps
-- All responses must match browser DevTools measurements Ā±20%
+- All responses must match browser DevTools measurements ±20%
 - This is a baseline test with 1 user to establish performance baseline</stringProp>
     </TestPlan>
     <hashTree>
@@ -59,29 +58,25 @@ Notes:
         <longProp name="ThreadGroup.start_time">1709839200000</longProp>
         <longProp name="ThreadGroup.end_time">1709839200000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration">
-        </stringProp>
-        <stringProp name="ThreadGroup.delay">
-        </stringProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">api.demoblaze.com</stringProp>
-          <stringProp name="HTTPSampler.port">
-          </stringProp>
+          <stringProp name="HTTPSampler.domain">www.demoblaze.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">
-          </stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
           <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
           <stringProp name="HTTPSampler.connect_timeout">20000</stringProp>
           <stringProp name="HTTPSampler.response_timeout">20000</stringProp>
         </ConfigTestElement>
-        <hashTree />
+        <hashTree/>
         <HeaderManager guiclass="HeaderManagerGui" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
           <collectionProp name="HeaderManager.headers">
             <elementProp name="Content-Type" elementType="Header">
@@ -98,10 +93,10 @@ Notes:
             </elementProp>
           </collectionProp>
         </HeaderManager>
-        <hashTree />
+        <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction: Load Homepage" enabled="true">
           <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -109,28 +104,21 @@ Notes:
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET / - Homepage" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments" />
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">
-            </stringProp>
-            <stringProp name="HTTPSampler.port">
-            </stringProp>
-            <stringProp name="HTTPSampler.protocol">
-            </stringProp>
-            <stringProp name="HTTPSampler.contentEncoding">
-            </stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">/</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re">
-            </stringProp>
-            <stringProp name="HTTPSampler.connect_timeout">
-            </stringProp>
-            <stringProp name="HTTPSampler.response_timeout">
-            </stringProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
@@ -142,17 +130,17 @@ Notes:
               <boolProp name="Assertion.assume_success">false</boolProp>
               <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             </ResponseAssertion>
-            <hashTree />
+            <hashTree/>
           </hashTree>
         </hashTree>
         <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time: Page Load" enabled="true">
           <stringProp name="ConstantTimer.delay">2000</stringProp>
           <stringProp name="RandomTimer.range">5000</stringProp>
         </UniformRandomTimer>
-        <hashTree />
+        <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction: Sign Up" enabled="true">
           <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -160,31 +148,23 @@ Notes:
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /api/signup" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments" />
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">
-            </stringProp>
-            <stringProp name="HTTPSampler.port">
-            </stringProp>
-            <stringProp name="HTTPSampler.protocol">
-            </stringProp>
-            <stringProp name="HTTPSampler.contentEncoding">
-            </stringProp>
-            <stringProp name="HTTPSampler.path">/signup</stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/api/signup</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re">
-            </stringProp>
-            <stringProp name="HTTPSampler.connect_timeout">
-            </stringProp>
-            <stringProp name="HTTPSampler.response_timeout">
-            </stringProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-            <stringProp name="Argument.name">
-            </stringProp>
+            <stringProp name="Argument.name"></stringProp>
             <stringProp name="Argument.value">{"username":"user_${__Random(100000,999999)}","password":"TestPass${__Random(1000,9999)}"}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </HTTPSamplerProxy>
@@ -195,19 +175,19 @@ Notes:
               </collectionProp>
               <stringProp name="Assertion.test_type">1</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             </ResponseAssertion>
-            <hashTree />
+            <hashTree/>
           </hashTree>
         </hashTree>
         <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time: Form Submit" enabled="true">
           <stringProp name="ConstantTimer.delay">2000</stringProp>
           <stringProp name="RandomTimer.range">3000</stringProp>
         </UniformRandomTimer>
-        <hashTree />
+        <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction: Log In" enabled="true">
           <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -215,31 +195,23 @@ Notes:
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /api/login" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments" />
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">
-            </stringProp>
-            <stringProp name="HTTPSampler.port">
-            </stringProp>
-            <stringProp name="HTTPSampler.protocol">
-            </stringProp>
-            <stringProp name="HTTPSampler.contentEncoding">
-            </stringProp>
-            <stringProp name="HTTPSampler.path">/login</stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/api/login</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re">
-            </stringProp>
-            <stringProp name="HTTPSampler.connect_timeout">
-            </stringProp>
-            <stringProp name="HTTPSampler.response_timeout">
-            </stringProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-            <stringProp name="Argument.name">
-            </stringProp>
+            <stringProp name="Argument.name"></stringProp>
             <stringProp name="Argument.value">{"username":"user_${__Random(100000,999999)}","password":"TestPass${__Random(1000,9999)}"}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </HTTPSamplerProxy>
@@ -252,17 +224,17 @@ Notes:
               <boolProp name="Assertion.assume_success">false</boolProp>
               <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             </ResponseAssertion>
-            <hashTree />
+            <hashTree/>
           </hashTree>
         </hashTree>
         <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time: Review Products" enabled="true">
           <stringProp name="ConstantTimer.delay">3000</stringProp>
           <stringProp name="RandomTimer.range">5000</stringProp>
         </UniformRandomTimer>
-        <hashTree />
+        <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction: Select Product" enabled="true">
           <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -270,28 +242,21 @@ Notes:
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /api/products" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments" />
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">
-            </stringProp>
-            <stringProp name="HTTPSampler.port">
-            </stringProp>
-            <stringProp name="HTTPSampler.protocol">
-            </stringProp>
-            <stringProp name="HTTPSampler.contentEncoding">
-            </stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">/api/products</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re">
-            </stringProp>
-            <stringProp name="HTTPSampler.connect_timeout">
-            </stringProp>
-            <stringProp name="HTTPSampler.response_timeout">
-            </stringProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
@@ -302,7 +267,7 @@ Notes:
               <stringProp name="JSONPostProcessor.pathAllMatches">false</stringProp>
               <stringProp name="JSONPostProcessor.compute_concat">false</stringProp>
             </JSONPostProcessor>
-            <hashTree />
+            <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Products Loaded" enabled="true">
               <collectionProp name="Asserions">
                 <stringProp name="49586">200</stringProp>
@@ -311,17 +276,17 @@ Notes:
               <boolProp name="Assertion.assume_success">false</boolProp>
               <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             </ResponseAssertion>
-            <hashTree />
+            <hashTree/>
           </hashTree>
         </hashTree>
         <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time: Product Details" enabled="true">
           <stringProp name="ConstantTimer.delay">2000</stringProp>
           <stringProp name="RandomTimer.range">4000</stringProp>
         </UniformRandomTimer>
-        <hashTree />
+        <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction: Add to Cart" enabled="true">
           <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -329,31 +294,23 @@ Notes:
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /api/cart" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments" />
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">
-            </stringProp>
-            <stringProp name="HTTPSampler.port">
-            </stringProp>
-            <stringProp name="HTTPSampler.protocol">
-            </stringProp>
-            <stringProp name="HTTPSampler.contentEncoding">
-            </stringProp>
-            <stringProp name="HTTPSampler.path">/cart</stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/api/cart</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re">
-            </stringProp>
-            <stringProp name="HTTPSampler.connect_timeout">
-            </stringProp>
-            <stringProp name="HTTPSampler.response_timeout">
-            </stringProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-            <stringProp name="Argument.name">
-            </stringProp>
+            <stringProp name="Argument.name"></stringProp>
             <stringProp name="Argument.value">{"product_id":"${productId}","quantity":1}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </HTTPSamplerProxy>
@@ -365,7 +322,7 @@ Notes:
               <stringProp name="JSONPostProcessor.pathAllMatches">false</stringProp>
               <stringProp name="JSONPostProcessor.compute_concat">false</stringProp>
             </JSONPostProcessor>
-            <hashTree />
+            <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Item Added" enabled="true">
               <collectionProp name="Asserions">
                 <stringProp name="49586">200</stringProp>
@@ -374,17 +331,17 @@ Notes:
               <boolProp name="Assertion.assume_success">false</boolProp>
               <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             </ResponseAssertion>
-            <hashTree />
+            <hashTree/>
           </hashTree>
         </hashTree>
         <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time: Review Cart" enabled="true">
           <stringProp name="ConstantTimer.delay">2000</stringProp>
           <stringProp name="RandomTimer.range">3000</stringProp>
         </UniformRandomTimer>
-        <hashTree />
+        <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction: View Cart" enabled="true">
           <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -392,28 +349,21 @@ Notes:
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /api/cart" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments" />
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">
-            </stringProp>
-            <stringProp name="HTTPSampler.port">
-            </stringProp>
-            <stringProp name="HTTPSampler.protocol">
-            </stringProp>
-            <stringProp name="HTTPSampler.contentEncoding">
-            </stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">/api/cart</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re">
-            </stringProp>
-            <stringProp name="HTTPSampler.connect_timeout">
-            </stringProp>
-            <stringProp name="HTTPSampler.response_timeout">
-            </stringProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
@@ -425,17 +375,17 @@ Notes:
               <boolProp name="Assertion.assume_success">false</boolProp>
               <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             </ResponseAssertion>
-            <hashTree />
+            <hashTree/>
           </hashTree>
         </hashTree>
         <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time: Proceed to Checkout" enabled="true">
           <stringProp name="ConstantTimer.delay">3000</stringProp>
           <stringProp name="RandomTimer.range">7000</stringProp>
         </UniformRandomTimer>
-        <hashTree />
+        <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction: Complete Checkout" enabled="true">
           <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments" />
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
@@ -443,31 +393,23 @@ Notes:
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /api/order" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments" />
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">
-            </stringProp>
-            <stringProp name="HTTPSampler.port">
-            </stringProp>
-            <stringProp name="HTTPSampler.protocol">
-            </stringProp>
-            <stringProp name="HTTPSampler.contentEncoding">
-            </stringProp>
-            <stringProp name="HTTPSampler.path">/order</stringProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/api/order</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re">
-            </stringProp>
-            <stringProp name="HTTPSampler.connect_timeout">
-            </stringProp>
-            <stringProp name="HTTPSampler.response_timeout">
-            </stringProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-            <stringProp name="Argument.name">
-            </stringProp>
+            <stringProp name="Argument.name"></stringProp>
             <stringProp name="Argument.value">{"name":"Test User","country":"USA","city":"New York","card":"4111111111111111","month":"12","year":"2026","cvv":"123"}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </HTTPSamplerProxy>
@@ -479,7 +421,7 @@ Notes:
               <stringProp name="JSONPostProcessor.pathAllMatches">false</stringProp>
               <stringProp name="JSONPostProcessor.compute_concat">false</stringProp>
             </JSONPostProcessor>
-            <hashTree />
+            <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert Order Successful" enabled="true">
               <collectionProp name="Asserions">
                 <stringProp name="49586">200</stringProp>
@@ -488,7 +430,7 @@ Notes:
               <boolProp name="Assertion.assume_success">false</boolProp>
               <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             </ResponseAssertion>
-            <hashTree />
+            <hashTree/>
           </hashTree>
         </hashTree>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
@@ -526,15 +468,12 @@ Notes:
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">
-            </stringProp>
+            <stringProp name="filename"></stringProp>
           </elementProp>
-          <stringProp name="filename">
-          </stringProp>
+          <stringProp name="filename"></stringProp>
         </ResultCollector>
-        <hashTree />
+        <hashTree/>
       </hashTree>
     </hashTree>
   </hashTree>
-  <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true" />
 </jmeterTestPlan>

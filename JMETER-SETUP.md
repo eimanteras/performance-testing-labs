@@ -5,12 +5,19 @@
 
 ## Installation Steps (Windows)
 
-### Option 1: Automatic Installation via Chocolatey (Recommended)
+### Option 1: Automatic Installation via winget (Recommended)
+```powershell
+winget install --id DEVCOM.JMeter --accept-source-agreements --accept-package-agreements
+```
+
+### Option 2: Automatic Installation via Chocolatey
+If `choco` is not recognized, install Chocolatey first: https://chocolatey.org/install
+
 ```powershell
 choco install jmeter
 ```
 
-### Option 2: Manual Installation
+### Option 3: Manual Installation
 1. Download JMeter from [jmeter.apache.org](https://jmeter.apache.org/)
    - Download: `apache-jmeter-5.6.x.zip` (or latest stable version)
 2. Extract to a location (e.g., `C:\tools\apache-jmeter-5.6.3`)
@@ -22,7 +29,7 @@ choco install jmeter
    jmeter -version
    ```
 
-### Option 3: Download and Run Portably (No Install)
+### Option 4: Download and Run Portably (No Install)
 1. Download from `/bin/ApacheJMeter.exe` in the ZIP
 2. Extract anywhere and run directly
 
@@ -31,6 +38,8 @@ choco install jmeter
 jmeter -version
 # Expected output: ApacheJMeter 5.6.x (or later)
 ```
+
+If `jmeter` is still not recognized right after install, open a new PowerShell window and run again.
 
 ## Quick Start
 
